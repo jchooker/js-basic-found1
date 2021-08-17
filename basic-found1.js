@@ -41,3 +41,17 @@ function sumOdds() {
 
 var c = sumOdds();
 console.log(c);
+
+//4. Iterate an array - sum of array
+
+function sumOfArray(iterArray) {
+    var sumOf = 0;
+    for (var i=0; i < iterArray.length; i++) {
+        sumOf += iterArray[i];
+    }
+    return sumOf;
+}
+
+var d = [-1, 44, 3, -20, 0, 12];
+var e = sumOfArray(d);
+console.log(e);
