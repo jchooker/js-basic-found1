@@ -110,3 +110,15 @@ function greaterThanCount(testVal, testArray) {
 var f = 19;
 var g = [-2, -33, 2000, 20, 18, -1500, 0, 22, 555];
 console.log(greaterThanCount(f,g));
+
+//9. Squares
+
+function squareArray(iterArray) {
+    for (var i = 0; i < iterArray.length; i++) {
+        iterArray[i] = Math.pow(iterArray[i],2);
+    }
+    return iterArray;
+}
+
+var h = [3, 22, -5, 0, 1, -4, 55];
+console.log(squareArray(h));
