@@ -31,7 +31,7 @@ console.log(b);
 
 function sumOdds() {
     var sumOf = 0;
-    for (var i=1; i<=5000; i+=1) {
+    for (var i=1; i<=5000; i++) {
         if (i%2!=0) {
             sumOf += i;
         }
@@ -39,8 +39,7 @@ function sumOdds() {
     return sumOf;
 }
 
-var c = sumOdds();
-console.log(c);
+console.log(sumOdds());
 
 //4. Iterate an array - sum of array
 
@@ -52,6 +51,62 @@ function sumOfArray(iterArray) {
     return sumOf;
 }
 
-var d = [-1, 44, 3, -20, 0, 12];
-var e = sumOfArray(d);
-console.log(e);
+var c = [-1, 44, 3, -20, 0, 12];
+console.log(sumOfArray(c));
+
+//5. Find max
+
+function findMax(iterArray) {
+    var newMax = iterArray[0];
+    for (var i = 1; i < iterArray.length; i++) {
+        if (iterArray[i]>newMax) {
+            newMax = iterArray[i];
+        }
+    }
+    return newMax;
+}
+
+var d = [333, -44, 0, 3333, 22, -200, 2121212, 1];
+console.log(findMax(d));
+
+//6. Find average
+
+function avg(iterArray) {
+    var runningSum = 0;
+    for (var i = 0; i < iterArray.length; i++) {
+        runningSum += iterArray[i];
+    }
+
+    return runningSum / iterArray.length;
+}
+
+var e = [22, -55, 12, 100, 1, -2];
+console.log(avg(e));
+
+//7. Array odd - all odds between 1 and 50
+
+function arrayOdd() {
+    var oddArray = [];
+    for (var i = 1; i <= 50; i+=2) {
+        oddArray.push(i);
+    }
+    return oddArray;
+}
+
+console.log(arrayOdd());
+
+//8. Greater than Y
+
+function greaterThanCount(testVal, testArray) {
+    var amtGreaterThan = 0;
+    for (var i = 0; i < testArray.length; i++) {
+        if (testArray[i] > testVal) {
+            amtGreaterThan++;
+        }
+    }
+    return amtGreaterThan;
+}
+
+var f = 19;
+var g = [-2, -33, 2000, 20, 18, -1500, 0, 22, 555];
+console.log(greaterThanCount(f,g));
